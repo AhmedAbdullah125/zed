@@ -15,7 +15,7 @@ export default function CategoryWithBanner({ data, banner }) {
                         <h3 className="section-title">{data[0].category}</h3>
                         <Link href={`/category/${data[0].category_id ? data[0].category_id : 1}`} className="products-link"> عرض الكل</Link>
                     </div>
-                    <div className="product-slider">
+                    <div className="product-slider" style={{ direction: "ltr" }}>
                         <Swiper
                             pagination={{ clickable: true }}
                             spaceBetween={12}
@@ -23,8 +23,8 @@ export default function CategoryWithBanner({ data, banner }) {
                             loop={true}
                             autoplay={false}
                             navigation={{
-                                nextEl: `#swiper-btn-leftCategort${data[0].category}`,
-                                prevEl: `#swiper-btn-rightCategort${data[0].category}`,
+                                nextEl: `#swiper-btn-leftCategort${data[0].category_id}`,
+                                prevEl: `#swiper-btn-rightCategort${data[0].category_id}`,
                             }}
                             modules={[Autoplay, Navigation, Pagination]}
                             className="category-swiper"
@@ -49,9 +49,9 @@ export default function CategoryWithBanner({ data, banner }) {
                                 data?.map((item) => (
                                     <SwiperSlide key={item.id} className="category-swiper-slide">
                                         <Link href={`/product/${item.id}`} className="product-item">
-                                            <figrue className="product-img">
+                                            <figure className="product-img">
                                                 <Image loading="lazy" src={item.image} className="img-fluid" width={400} height={400} alt="product-image" />
-                                            </figrue>
+                                            </figure>
                                             <div className="product-content">
                                                 <div className="product-name">{item.name}</div>
                                                 <div className="price-box">
@@ -67,10 +67,10 @@ export default function CategoryWithBanner({ data, banner }) {
                                 ))
                             }
                         </Swiper>
-                        <div className="swiper-btn-prev swiper-btn" id="swiper-btn-leftCategort${data[0].category}">
+                        <div className="swiper-btn-prev swiper-btn" id={`swiper-btn-leftCategort${data[0].category_id}`}>
                             <i className="fa-regular fa-chevron-right" ></i>
                         </div>
-                        <div className="swiper-btn-next swiper-btn" id="swiper-btn-rightCategort${data[0].category}">
+                        <div className="swiper-btn-next swiper-btn" id={`swiper-btn-rightCategort${data[0].category_id}`}>
                             <i className="fa-regular fa-chevron-left"></i>
                         </div>
                     </div>
@@ -84,6 +84,7 @@ export default function CategoryWithBanner({ data, banner }) {
                     </div>
                 </div>
             </section>
+            
         </div>
     )
 }

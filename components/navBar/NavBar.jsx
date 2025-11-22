@@ -16,18 +16,18 @@ export default function Page() {
                         <div className="container">
                             <div className="nav-header">
                                 <figure className="img-logo">
-                                    <Link href="#"><Image loading="lazy" alt="zed" src={logo} /></Link>
+                                    <Link href="/"><Image loading="lazy" alt="zed" src={logo} /></Link>
                                 </figure>
                                 <div className="navgition">
                                     <ul className="big-menu">
                                         <li>
-                                            <Link href="#" className="active"> الرئيسية </Link>
+                                            <Link href="/" className="active"> الرئيسية </Link>
                                         </li>
                                         <li>
-                                            <Link href="#"> فئات </Link>
+                                            <Link href="/categories"> فئات </Link>
                                         </li>
                                         <li>
-                                            <Link href="#"> ازاله</Link>
+                                            <Link href="/brands"> الماركات </Link>
                                         </li>
                                     </ul>
                                 </div>

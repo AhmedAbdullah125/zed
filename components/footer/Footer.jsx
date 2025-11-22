@@ -11,7 +11,7 @@ export default function page() {
                     <div className="row">
                         <div className="footer-item">
                             <figure className="footer-logo">
-                                <Link href="/" ><Image loading="lazy" src={logo} className="img-fluid" /></Link>
+                                <Link href="/" ><Image loading="lazy" src={logo} className="img-fluid" alt="ZED" /></Link>
                             </figure>
                             <div className="social-info">
                                 <div className="">1150 ِ أحمد ماهر</div>
@@ -73,7 +73,7 @@ export default function page() {
                         </div>
                         <div className="footer-item">
                             <h2 className="footer-head">مدفوعات آمنة ومحمية بنسبة 100٪</h2>
-                            <Image loading="lazy" src={pay} alt="pay-method" className="pay-footer" />
+                            <Image loading="lazy" alt="pay-method" src={pay} className="pay-footer" />
                         </div>
                     </div>
                 </div>
