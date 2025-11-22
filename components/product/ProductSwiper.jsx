@@ -27,7 +27,7 @@ export default function ProductSwiper({ data }) {
                 className="swiper product-thumbs"
                 //after 767px => horizontal
                 breakpoints={{
-                    1440: {
+                    5040: {
                         direction: "horizontal",
                         slidesPerView: 3.2, 
                     },
